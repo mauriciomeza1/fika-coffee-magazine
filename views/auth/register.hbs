@@ -1,0 +1,19 @@
+<h2>Crear usuario</h2>
+    <form action="/auth/register" method="POST">
+        <label for="email"> Email</label>
+        <input id="email" name="email" type="text" placeholder="hola@hola.com">
+        <div>        
+            <label for="username"> Username</label>
+				<input id="username" name="username" type="text" placeholder="ironhacker">
+		</div>
+		<label for="email"> Password</label>
+        <input id="password" name="password" type="password">
+        {{#if errorMessage}}
+            <h3 class="text-sm font-medium text-red-800">
+			    {{errorMessage}}
+			</h3>
+		{{/if}}
+		<div>
+			<button type="submit">Registrarme</button>
+        </div>
+</form>

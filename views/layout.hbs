@@ -1,13 +1,44 @@
+{{!-- ./views/layout.hbs --}}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicación IronHack</title>
-    <link rel="stylesheet" href="./css/styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>FIKA COFFEE MAGAZINE</title>
 </head>
+
 <body>
-    {{{ body }}}
+    <header>
+        <div class="headercontainer1">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Store</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="headercontainer2">
+            {{#if currentUser}}
+            <span class="greeting">
+                Hola {{ currentUser.username }}
+            </span>
+
+            <a href="/auth/logout" class="headerbutton2 logoutbutton"> Cerrar sesión </a>
+
+            {{else}}
+
+            <a href="/auth/login" class="headerbutton2 loginbutton"> Iniciar sesión </a>
+            <a href="/auth/register" class="headerbutton2 signupbutton2"> Registrarme </a>
+
+            {{/if}}
+        </div>
+    </header>
+  {{{ body }}}
+
 </body>
+
 </html>

@@ -26,8 +26,6 @@ app.use(express.static("/public"));
 
 app.use(express.urlencoded({ extended: true }))
 
-
-
 // 3. RUTEO
 // LAYOUT MIDDLEWARE
 app.use((req, res, next) =>{
@@ -39,7 +37,7 @@ app.use((req, res, next) =>{
 app.use("/", require("./routes/index"))
 app.use("/auth", require("./routes/auth"))
 
-
+app.use("/articles", require("./routes/article"))
 
 // 4. SERVIDOR
 app.listen(process.env.PORT, () => console.log(`Servidor activo en puerto ${process.env.PORT}`))

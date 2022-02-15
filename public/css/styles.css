@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;900&display=swap');
+
 
 
 body {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -52,15 +54,27 @@ header a {
 
 .herotext {
 	position: absolute;
-	top: 350px;
+	top: 280px;
 	left: 150px;
 	width: 60%
+}
+
+.herotext h2 {
+	font-family: 'Lato', sans-serif;
+	margin: 0;
+	color: rgb(166,137,102);
+}
+
+.herotext h1 {
+	font-size: 3.4rem;
+	width: 70%;
+	margin: 0
 }
 
 
 .wave2 {
 	position: relative;
-	bottom: 5px;
+	bottom: 7px;
 }
 
 .heartcontainer{
@@ -72,12 +86,18 @@ header a {
 }
 
 .aboutuscontainer{
-	width: 30%;
+	width: 45%;
 	position: absolute;
 	z-index: 100;
 	top: 950px;
 	right: 200px;
-	color: white
+	color: white;
+	font-size: 1.4rem;
+	text-align: center;
+}
+
+.aboutuscontainer p {
+	font-family: 'Lato', sans-serif;
 }
 
 .phrase {
@@ -157,12 +177,19 @@ header a {
 	padding: 20px;
 	margin-top: 20px;
 }
+
+.allarticles{
+	display: flex;
+	position: relative;
+	justify-content: space-around;
+	margin: 50px 500px 0 500px;
+}
  
 .newsletter {
 	display: flex;
 	position: relative;
 	justify-content: center;
-	margin-top: 50px
+	margin-top: 150px
 }
 
 .newscontainer {
@@ -250,11 +277,17 @@ header a {
 
 
 
+ .wavescontact{
+	 display: flex;
+	 position: relative;
+	 align-items: flex-end;
+	 margin-top: 170px;
+ }
 
-
-
-  .logincontainer, .registercontainer {
-	  display: flex;
-	  position: relative;
-	  top: 170px
-  }
+ .newblog, .articletest{
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 padding: 200px 200px 0 200px;
+	 flex-direction: column;
+ }

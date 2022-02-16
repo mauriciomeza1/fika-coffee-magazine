@@ -15,10 +15,10 @@ router.get ("/all", articleController.article)
 router.get("/new", articleController.newArticle)
 router.post("/new", articleController.newArticleForm)
 
-router.get("/:id", articleController.getSingleArticle)
-/*
-router.post("/:id/delete", articleController.deleteBlog)
+//router.get("/:id", articleController.getSingleArticle)
 
+router.post("/:id/delete", articleController.deleteArticle)
+/*
 router.get("/:id/edit", articleController.editBlog)
 
 router.post("/:id/edit", articleController.editBlogForm)*/

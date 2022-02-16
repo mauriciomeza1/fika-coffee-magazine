@@ -1,17 +1,27 @@
-<form class="newblog" action="/articles/new" method="POST">
- <h2>New Article</h2>
-<div>
-    <label for="title">Title</label>
-    <input type="text" name="title" id="title">
-</div>
-<div>
-    <label for="descrption">Description</label>
-    <textarea name="description" id="description" ></textarea>
-</div>
-<div>
-    <label for="markdown">Markdown</label>
-    <textarea name="markdown" id="markdown"></textarea>
-</div>
-<a href="all">Cancel</a>
-<button type="submit">Save</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script>
+      tinymce.init({
+        selector: '#markdown'
+      });
+    </script>
+
+  </head>
+
+  <body>
+    <form method="post" class="wholearticle">
+    <div class="blogtitle">
+        <label for="title">Article Title</label>
+        <input type="text" name="title" id="title">
+    </div>
+      <textarea name="markdown" id="markdown" placeholder="Hello World!"></textarea>
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>

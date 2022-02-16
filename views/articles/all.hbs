@@ -1,3 +1,19 @@
 <div class="articletest">
-<h1>Here should be all the articles</h1>
+<h1>Blog</h1>
+
+{{#each articles}}
+
+    <div class="singlearticle">
+    <h2>{{title}}</h2>
+    {{{markdown}}}
+    <img>
+    </div>
+
+    <form action="articles/{{this._id}}/delete" method="POST">
+        <button type="submit">Delete article</button>
+	</form>
+
+{{/each}}
+
+<a href="articles/new">Create new article</a>
 </div>

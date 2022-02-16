@@ -20,33 +20,6 @@ exports.newArticle = async (req, res) => {
 	res.render('articles/new')
 }
 
-/*
-exports.getSingleArticle = async (req, res) => {
-
-	try {
-
-		const { id } = req.params
-
-		console.log(id)
-		console.log(typeof id)
-
-		const singleArticle = await Article.findById(id)
-
-		return res.render("articles/all", {
-			singleArticle
-		})
-
-
-	} catch (error) {
-		
-		console.log(error)
-
-		return res.render(`articles/new`, {
-			errorMsg: "Hubo un problema en la muestra de los detalles del cuarto."
-		})
-
-	}
-}*/
 
 
 exports.newArticleForm = async (req, res) => {
@@ -62,6 +35,27 @@ exports.newArticleForm = async (req, res) => {
 
 	res.redirect("/articles")
 
+}
+
+exports.getSingleArticle = async (req, res) => {
+
+	try {
+
+		const { id } = req.params
+		const singleArticle = await Article.findById(id)
+		return res.render("articles/details", {
+			singleArticle
+		})
+
+
+	} catch (error) {
+		
+		console.log(error)
+		return res.render(`/articles`, {
+			errorMsg: "Hubo un problema en la muestra de los detalles."
+		})
+
+	}
 }
 
 
@@ -83,6 +77,36 @@ exports.deleteArticle = async (req, res) => {
 
 
 
+exports.editArticle = async (req, res) => {
+
+	const { id } = req.params
+
+	const singleArticle = await Article.findById(id)
+
+	res.render("articles/edit", {
+		singleArticle
+	})
+
+
+}
+
+
+exports.editArticleForm = async (req, res) => {
+
+	const { title, markdown } = req.body
+
+	const { id } = req.params
+
+	await Article.findByIdAndUpdate(
+		id,
+		{ title, markdown },
+		{ new: true }
+	)
+
+	res.redirect(`/articles/${id}`)
+
+
+}
 
 
 

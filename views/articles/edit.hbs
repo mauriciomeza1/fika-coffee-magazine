@@ -1,0 +1,12 @@
+<div class="edittitle">
+    <h2>Edit Article</h2>
+</div>
+<div class="editarticle">
+    
+    <form action="/articles/{{singleArticle._id}}/edit" method="POST">
+        <div><input type="text" name="title" value="{{singleArticle.title}}"  /></div>
+        <div class="markdown"><textarea name="markdown" class="editmarkdown" cols="30" rows="10">{{singleArticle.markdown}}</textarea></div>
+        <div><button type="submit">Editar</button></div>       
+    </form>
+    <a href="/articles/{{singleArticle._id}}">Go Back</a>
+</div>

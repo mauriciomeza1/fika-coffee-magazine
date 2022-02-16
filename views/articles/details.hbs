@@ -1,0 +1,19 @@
+<div class="articletest">
+    <div class="singlearticle">
+    <h2>{{singleArticle.title}}</h2>
+    {{{singleArticle.markdown}}}
+    <img>
+    </div>
+
+    <form action="articles/{{this._id}}/delete" method="POST">
+        <button type="submit">Delete article</button>
+	</form> 
+
+    <a href="/articles/{{singleArticle._id}}/edit">
+	<button>Editar</button>
+    </a>
+
+
+    <a href="articles/new">Create new article</a>
+    <a href="/articles/all">Go back</a>
+</div>

@@ -289,7 +289,7 @@ header a {
 	 display: flex;
 	 align-items: center;
 	 justify-content: center;
-	 padding: 200px 200px 0 200px;
+	 padding: 130px 200px 0 200px;
 	 flex-direction: column;
 	 justify-content: center;
  }
@@ -320,4 +320,21 @@ header a {
 
  .blogtitle {
 	 margin: 0 35% 0 35%
+ }
+
+
+ .editarticle {
+	 display: flex;
+	 position: relative;
+	 align-items: center;
+	 justify-content: center;
+	 flex-direction: column;
+ }
+
+ .edittitle {
+	padding-top: 130px;
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
  }

@@ -15,13 +15,13 @@ router.get ("/all", articleController.article)
 router.get("/new", articleController.newArticle)
 router.post("/new", articleController.newArticleForm)
 
-//router.get("/:id", articleController.getSingleArticle)
+router.get("/:id", articleController.getSingleArticle)
 
 router.post("/:id/delete", articleController.deleteArticle)
-/*
-router.get("/:id/edit", articleController.editBlog)
+                
+router.get("/:id/edit", articleController.editArticle)
 
-router.post("/:id/edit", articleController.editBlogForm)*/
+router.post("/:id/edit", articleController.editArticleForm)
 
 // 3. EXPORTACIÓN
 module.exports = router

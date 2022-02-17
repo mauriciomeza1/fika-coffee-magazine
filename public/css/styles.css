@@ -149,10 +149,24 @@ header a {
 	height: 300px;
 }
 
-.blogtitlecont{
+.blogtitlecont, .blogtitlecont2{
 	display: flex;
 	position: relative;
 	justify-content: center;
+}
+
+.blogtitlecont{
+	font-size: 2.5rem;
+}
+
+.blogtitlecont h2{
+	margin-bottom: 0;
+}
+
+.blogtitlecont2 h5{
+	font-family: 'Lato', sans-serif;
+	font-size: 2rem;
+	margin-top: 0;
 }
 
 .blog {
@@ -167,9 +181,8 @@ header a {
 }
 
 .fakeimg {
-	background-color: #aaa;
-	width: 100%;
-	padding: 20px;
+	width: 200px;
+	height: 200px;
 }
   
   
@@ -179,109 +192,80 @@ header a {
 	margin-top: 20px;
 }
 
+.blog p {
+	width: 200px
+}
+
 .allarticles{
 	display: flex;
 	position: relative;
 	justify-content: space-around;
 	margin: 50px 500px 0 500px;
 }
- 
-.newsletter {
-	display: flex;
-	position: relative;
-	justify-content: center;
-	margin-top: 150px
+
+.content {
+	position: absolute;
 }
 
-.newscontainer {
-	display: flex;
-	position: relative;
-	justify-content: center;
+.newsletter h2{
+	padding-left: 83px;
+	color: rgb(255, 255, 255);
 }
-  
-  .content {
-	width: 360px;
-	height: 40px;
-	box-shadow: 2px 4px 10px rgba(0, 0, 0, .2);
-	border-radius: 60px;
-	overflow: hidden;
-  }
-  
-  .subscription {
-	position: relative;
-	width: 100%;
-	height: 100%;
-  }
-  
-  .subscription .add-email{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border: none;
-	outline: none;
-	padding: 0 20px;
-  }
-  
-  .subscription .submit-email {
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: calc(100% - 2px);
-	width: 100px;
-	border: none;
-	border-radius: 60px;
-	outline: none;
-	margin: 1px;
-	padding: 0 20px;
-	cursor: pointer;
-	background: #771c00;
-	color: #FFFFFF;
-	transition: width .35s ease-in-out,
-	  background .35s ease-in-out;
-  }
-  
-  .subscription.done .submit-email {
-	width: calc(100% - 2px);
-	background: #C0E02E;
-  }
-  
-  .subscription .submit-email .before-submit,
-  .subscription .submit-email .after-submit {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	line-height: 38px;
-	transition: visibility .35s ease-in-out,
-	  opacity .35s ease-in-out;
-  }
-  
-  .subscription.done .submit-email .before-submit,
-  .subscription:not(.done) .submit-email .after-submit {
-	visibility: hidden;
-	opacity: 0;
-  }
-  
-  .subscription .submit-email .after-submit {
-	transition-delay: .35s;
-  }
-  
-  .subscription:not(.done) .submit-email .before-submit,
-  .subscription.done .submit-email .after-submit {
-	visibility: visible;
-	opacity: 1;
-  }
 
+#tran {
+    width: 450px;
+    margin: 0 auto 0;
+    padding: 0 40px 30px;
+    border-radius: 3px;
+    background-color: #1f52d300;
+    background-size: cover;
+    background-repeat: repeat;
+}
+#tran input[type="text"],
+#tran input[type="submit"] {
+    font-family: Karla;
+    font-size: 18px;
+    width: 85%;
+    padding: 15px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: none;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: block;
+    float: none;
+    clear: both;
+}
+#tran input[type="text"] {
+    background: white;
+    margin: 0 auto 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+#tran input[type="text"]:focus {
+    outline: none;
+}
+#tran input[type="submit"] {
+    background: rgb(166,137,102);
+    color: white;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+#tran input[type="submit"]:hover {
+    background: rgb(109,77,54);
+}
+:focus::-webkit-input-placeholder,
+:focus::-webkit-input-placeholder {
+    text-indent: -999px
+}
 
 
  .wavescontact{
 	 display: flex;
 	 position: relative;
+	 flex-wrap: wrap;
 	 align-items: flex-end;
+	 justify-content: center;
 	 margin-top: 170px;
  }
 
@@ -337,4 +321,27 @@ header a {
 	position: relative;
 	align-items: center;
 	justify-content: center;
+ }
+
+
+ .btn1{
+	 width: 500px;
+	 font-size: 20px;
+	 color:white;
+	 background-color: rgb(166,137,102);
+	 text-decoration: none;
+	 border-radius: 100px;
+	 padding: 5px
+ }
+
+ .btn2 {
+	 
+	width: 200px;
+	font-size: 20px;
+	color:white;
+	background-color: rgb(109,77,54);
+	text-decoration: none;
+	border-radius: 10px;
+	padding: 5px;
+	text-align: center;
  }

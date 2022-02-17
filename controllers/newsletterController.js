@@ -1,4 +1,4 @@
-const mongoose		= require("mongoose")
+/*const mongoose		= require("mongoose")
 const Newsletter	= require("./../models/Newsletter")
 
 
@@ -12,4 +12,4 @@ exports.send = async (req, res) => {
 
 	res.redirect("/")
 
-}
+}*/

@@ -372,3 +372,7 @@ header a {
 	 margin-bottom: 40px;
  }
  
+ .logincontainer, .logoutcontainer, .registercontainer{
+	padding: 110px 50px 50px 0;
+	text-align: center;
+ }

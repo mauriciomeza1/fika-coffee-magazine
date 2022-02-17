@@ -2,6 +2,7 @@ const mongoose		= require("mongoose")
 const Article			= require("./../models/Article")
 
 
+
 exports.article = async (req, res) => {
 
 	const allArticles = await Article.find({}).populate("title")
@@ -64,9 +65,12 @@ exports.deleteArticle = async (req, res) => {
 	const { id } = req.params
 
 	try {
-		
-		const deletedArticle = await Article.findByIdAndRemove(id)
-		res.redirect("/articles/all")
+		function deleted() {
+			if (confirm("Do you really want to delete?")) {
+				const deletedArticle = await Article.findByIdAndRemove(id)
+					res.redirect("/articles/all")
+			}
+		}
 
 	} catch (error) {
 		console.log(error)

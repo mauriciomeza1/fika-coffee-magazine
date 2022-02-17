@@ -9,14 +9,14 @@
     <img>
     </div>
 
-    <a href="{{this._id}}">Check Article</a>
+    <a class="btn1 btncheck" href="{{this._id}}">Check Article</a>
 
-    <form action="articles/{{this._id}}/delete" method="POST">
-        <button type="submit">Delete article</button>
+    <form action="{{this._id}}/delete" method="POST">
+        <button class="btn2 btndelete" type="submit">Delete article</button>
 	</form>
     
 
 {{/each}}
 
-<a href="articles/new">Create new article</a>
+<a href="/articles/new">Create new article</a>
 </div>

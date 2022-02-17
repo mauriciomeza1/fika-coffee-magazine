@@ -74,7 +74,7 @@ header a {
 
 .wave2 {
 	position: relative;
-	bottom: 7px;
+	bottom: 8px;
 }
 
 .heartcontainer{
@@ -327,11 +327,19 @@ header a {
  .btn1{
 	 width: 500px;
 	 font-size: 20px;
-	 color:white;
-	 background-color: rgb(166,137,102);
+	 color:rgb(80, 39, 39);
 	 text-decoration: none;
-	 border-radius: 100px;
-	 padding: 5px
+	 border-radius: 8px;
+	 padding: 5px;
+	 border: 2px solid rgb(85, 84, 84);
+	 transition-duration: 0.4s;
+	 text-align: center;
+ }
+
+ .btn1:hover {
+	background-color: rgb(85, 84, 84); 
+	color: white;
+	border-color: rgb(85, 84, 84);
  }
 
  .btn2 {
@@ -339,9 +347,28 @@ header a {
 	width: 200px;
 	font-size: 20px;
 	color:white;
-	background-color: rgb(109,77,54);
+	background-color: rgb(46, 32, 22);
 	text-decoration: none;
 	border-radius: 10px;
 	padding: 5px;
 	text-align: center;
+	transition-duration: 0.4s;
  }
+
+ .btn2:hover {
+	font-size: 19px;
+ }
+
+ .btncheck{
+	margin-bottom: 15px;
+ }
+
+ .btncheck:hover {
+	 background-color: rgb(166,137,102);
+	 border-color: rgb(166,137,102);
+ }
+
+ .btndelete{
+	 margin-bottom: 40px;
+ }
+ 

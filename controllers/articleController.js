@@ -33,7 +33,7 @@ exports.newArticleForm = async (req, res) => {
 
 	console.log(newArticle)
 
-	res.redirect("/articles")
+	res.redirect("/articles/all")
 
 }
 
@@ -66,7 +66,7 @@ exports.deleteArticle = async (req, res) => {
 	try {
 		
 		const deletedArticle = await Article.findByIdAndRemove(id)
-		res.redirect("/articles")
+		res.redirect("/articles/all")
 
 	} catch (error) {
 		console.log(error)

@@ -1,11 +1,8 @@
-/*const express			= require("express")
+const express			= require("express")
 const router			= express.Router()
 const Newsletter          = require('./../models/Newsletter')
 const newsletterController = require("./../controllers/newsletterController")
 
-
-router.get ("/", newsletterController.send)
-
+router.post("/", newsletterController.receive)
 
 module.exports = router
-*/

@@ -21,7 +21,7 @@ exports.registerForm = async (req, res) => {
 	if(!username || !email || !password){
 
 		return res.render("auth/register", {
-			errorMessage: "Todos los campos deben llenarse."
+			errorMessage: "All fields are required."
 		})
 	}	
 
@@ -31,7 +31,7 @@ exports.registerForm = async (req, res) => {
 	if(!regex.test(password)){
 		
 		return res.render("auth/register", {
-			errorMessage: "Tu contraseña debe incluir 6 caracteres, al menos un número, una minúscula y una mayúscula."
+			errorMessage: "Your password must include at least: 6 characters, one number, a lowercase and a uppercase."
 		})
 
 	}
@@ -54,8 +54,6 @@ exports.registerForm = async (req, res) => {
 			password: hashedPassword
 		})
 	
-		console.log(newUser)
-	
 		return res.redirect("/profile")
 
 	} catch (error) {
@@ -68,7 +66,7 @@ exports.registerForm = async (req, res) => {
 		if (error instanceof mongoose.Error.ValidationError){
 			
 			return res.render("auth/register", {
-				errorMessage: "Por favor utiliza un correo electrónico real."
+				errorMessage: "Please use a real email adress."
 			})
 		}
 
@@ -88,8 +86,6 @@ exports.login = (req, res) => {
 
 exports.loginForm = async (req, res) => {
 
-	console.log(req.body)
-
 	// 1. OBTENCIÓN DE DATOS DEL FORMULARIO
 	const { email, password } = req.body
 
@@ -100,7 +96,7 @@ exports.loginForm = async (req, res) => {
 	if(!foundUser){
 
 		res.render("auth/login", {
-			errorMessage: "Email o contraseña sin coincidencia."
+			errorMessage: "User or password not found."
 		})
 
 		return
@@ -113,7 +109,7 @@ exports.loginForm = async (req, res) => {
 	if(!verifiedPass){
 
 		res.render("auth/login", {
-			errorMessage: "Email o contraseña incorrecta."
+			errorMessage: "Incorrect email or password."
 		})
 
 		return
@@ -126,7 +122,7 @@ exports.loginForm = async (req, res) => {
 		_id: foundUser._id,
 		username: foundUser.username,
 		email: foundUser.email,
-		msg: "Este es su ticket"
+		msg: "This is your ticket"
 	}
 
 	// 5. REDIRECCIÓN AL PROFILE

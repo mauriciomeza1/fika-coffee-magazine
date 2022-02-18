@@ -36,6 +36,8 @@ app.use((req, res, next) =>{
 app.use("/", require("./routes/index"))
 app.use("/auth", require("./routes/auth"))
 app.use("/articles", require("./routes/article"))
+app.use("/subscribed", require("./routes/newsletter"))
+
 
 // 4. SERVIDOR
 app.listen(process.env.PORT, () => console.log(`Servidor activo en puerto ${process.env.PORT}`))
